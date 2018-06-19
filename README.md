@@ -3,4 +3,6 @@ bootstrapped with [Create React App] (https://github.com/facebookincubator/creat
 
 A very basic React App setup with localization using React-Intl (https://github.com/yahoo/react-intl/wiki)
 
-This is just step 1.
+This is step 2. 
+1. Added dropdownlist
+2. Locale state and change locale function
