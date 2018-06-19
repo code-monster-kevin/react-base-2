@@ -7,13 +7,25 @@ import App from './App';
 addLocaleData(zhLocaleData);
 
 class AppIntl extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      locale: 'en'
+    };
+  }
+
+  handleChangeLocale = value => {
+    this.setState({ locale: value });
+  };
+
   render() {
-    const locale = 'zh';
+    const { locale } = this.state;
     const messages = translations[locale];
 
     return (
       <IntlProvider locale={locale} key={locale} messages={messages}>
-        <App />
+        <App handleChangeLocale={this.handleChangeLocale} locale={locale} />
       </IntlProvider>
     );
   }

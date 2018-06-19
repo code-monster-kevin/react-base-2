@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { injectIntl, defineMessages } from 'react-intl';
 import logo from './logo.svg';
 import './App.css';
+import DropDownLocale from './components/common/DropDownLocale';
 
 const messages = defineMessages({
   title: {
@@ -34,6 +35,10 @@ class App extends Component {
           <h1 className="App-title">{formatMessage(messages.welcome)}</h1>
         </header>
         <p className="App-intro">{formatMessage(messages.intro)}</p>
+        <DropDownLocale
+          locale={this.props.locale}
+          handleChangeLocale={this.props.handleChangeLocale}
+        />
       </div>
     );
   }
