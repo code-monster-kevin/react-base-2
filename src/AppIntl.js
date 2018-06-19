@@ -11,11 +11,12 @@ class AppIntl extends Component {
     super(props);
 
     this.state = {
-      locale: 'en'
+      locale: localStorage.getItem('app.locale') || 'en'
     };
   }
 
   handleChangeLocale = value => {
+    localStorage.setItem('app.locale', value);
     this.setState({ locale: value });
   };
 

@@ -6,3 +6,4 @@ A very basic React App setup with localization using React-Intl (https://github.
 This is step 2. 
 1. Added dropdownlist
 2. Locale state and change locale function
+3. Saved locale to localStorage
